@@ -1,7 +1,8 @@
 const mysql = require("mysql");
 const mysqlConnection = require("../connection");
-exports.getspeople =(async(req,res)=>{
-    mysqlConnection.query("SELECT * from people", async(err, rows, fields) => {
+const {getslist} = require("./service");
+exports.getspeople =async(req,res)=>{
+    mysqlConnection.query("SELECT * from people",async(err, rows, fields) => {
      if(!err)
      {
          await res.send(rows);
@@ -11,4 +12,4 @@ exports.getspeople =(async(req,res)=>{
          console.log('unhandledRejection',err);
      }
   });
-});
+};

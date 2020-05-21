@@ -1,9 +1,13 @@
- const {getspeople}=require("./query");
+ const {getspeople}=require("./service");
  const express = require("express");
+ const {getslist} = require("./service");
  const Router = express.Router();
  const mysqlConnection = require("../connection");
 
- Router.get("/",getspeople);
+
+ Router.get("/",getslist);
+
+
  
  
 
