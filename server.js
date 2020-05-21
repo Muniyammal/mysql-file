@@ -9,4 +9,4 @@ app.use(bodyParser.json());
 app.use("/people",PeopleRoutes);
 
 
-app.listen(3001);
+app.listen(3000);
